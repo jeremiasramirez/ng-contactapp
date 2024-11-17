@@ -12,7 +12,7 @@ export class UsersServices{
     public getUsers(): Observable<any>{
         return ajax.get('https://jsonplaceholder.typicode.com/users').pipe(
             pluck('response'),
-            // delay(1000)
+            delay(1000)
         )
     }
 

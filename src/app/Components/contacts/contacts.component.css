@@ -1,0 +1,113 @@
+
+   
+    .container__contacts{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /*background-color: red;*/
+    }
+
+    .container__contacts__items{
+        background-color: whitesmoke;
+        width: 500px;
+        margin-top: 45px;
+        border-top-left-radius: 7px;
+        border-top-right-radius:  7px;
+
+        min-height: 450px;
+    }
+    .container__contacts__head{
+        display: flex;
+        padding: 0 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container__contacts__head h1{
+        font-size: 18px;
+        font-family: sans-serif;
+        font-weight: 600;
+        
+    }
+    .container__contacts__head button{
+        padding-right: 10px;
+    }
+    .container__contacts__head button *{
+        font-size:23px !important; 
+        transform: scale(1.1);
+    }
+
+    .container__input__search{
+        text-align: center;
+    }
+    .container__input__search input{
+        width: 320px;
+        border:none;
+        padding: 4px;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .container__edit{
+        background-color: rgb(16, 46, 154);
+        transform: translateY(-494.6px);
+     
+        width: 500px;
+        margin-top: 45px;
+        display: none;
+        min-height: 450px;
+    }
+    .contact{
+        display: flex;
+        padding: 5px;
+        margin: 0 8px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgb(198, 203, 197);
+        cursor: pointer;
+    }
+    .icon__contact{
+        background-color: rgb(192, 184, 184);
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+    .container__item__name{
+        margin-top: 10px;
+    }
+    .contact button{
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        background-color: transparent;
+    }
+   
+    .scroll__items{
+        height: 310px;
+        scrollbar-width: 10px;
+        overflow-y: scroll;
+       
+    }    
+ 
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #acacaceb;
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #a09e9e;
+      }

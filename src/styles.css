@@ -2,3 +2,19 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.animate{
+    animation: animate .5s linear;
+}
+
+@keyframes animate {
+    from{
+        opacity: .2;
+    }
+    to{
+        opacity: 1;
+       
+    }
+
+}

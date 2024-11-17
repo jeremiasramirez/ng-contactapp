@@ -6,22 +6,54 @@
 
 <section class="container__contacts">
 
-   
+   <article class="container__contacts__items">
+        <!-- options -->
+        <div class="container__contacts__head">
+            <h1>Contactos</h1>
+            <button mat-button >
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add"></mat-icon>
+            </button>
+        </div>
+
+        <!-- input -->
+        <div class="container__input__search">
+            <input type="search" placeholder="Buscar" [(ngModel)]="inputValue">
+        </div>
+        <br>
+        <!-- contacts items -->
+        <div class="scroll__items" >
+            <app-skeleton-item *ngIf="!isLoadData"  />
+            <!-- ngIf="isLoad" -->
+            <div class="container__items" *ngFor="let contact of  USERS">
+                
+                <div class="contact animate" matRipple *ngIf="isLoadData">
+                    <div class="icon__contact">{{contact.name.substring(0,1)}}</div>
+                    <p class="container__item__name">{{contact.name}}</p>
+                    <button  mat-icon-button >
+                        <mat-icon >chevron_right</mat-icon>
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+
+   </article>
+
+   <!-- edit -->
+   <!-- <article class=" container__edit">
+
+    <div class="container__contacts__head">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="arrow-back"></mat-icon>
+        <h1>Contactos</h1>
+        <button mat-button >
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add"></mat-icon>
+            </button>
+    </div>
+
+    </article> -->
 
 
 </section>
 
+<!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon> -->
 
-<style>
-
-   
-    .container__contacts{
-        max-width: 700px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-
-</style>
