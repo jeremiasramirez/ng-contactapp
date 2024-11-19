@@ -21,7 +21,8 @@ export interface UserInterfaces{
     name: string,
     phone: string,
     username: string,
-    website: string
+    website: string,
+    email: string,
 
 
 }

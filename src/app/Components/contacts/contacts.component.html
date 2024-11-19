@@ -4,11 +4,17 @@
 
 
 
+
 <section class="container__contacts">
 
-   <article class="container__contacts__items">
+<app-contact *ngIf="isDataToViewActive"
+(getBackContact)="openContacts($event)"
+ [dataToView]="dataToView"/>
+
+ 
+   <article class="container__contacts__items" *ngIf="!isDataToViewActive">
         <!-- options -->
-        <div class="container__contacts__head">
+        <div class="container__contacts__head animate">
             <h1>Contactos</h1>
             <button mat-button >
                 <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add"></mat-icon>
@@ -21,12 +27,12 @@
         </div>
         <br>
         <!-- contacts items -->
-        <div class="scroll__items" >
+        <div class="scroll__items" *ngIf="!isDataToViewActive">
             <app-skeleton-item *ngIf="!isLoadData"  />
             <!-- ngIf="isLoad" -->
             <div class="container__items" *ngFor="let contact of  USERS">
                 
-                <div class="contact animate" matRipple *ngIf="isLoadData">
+                <div class="contact animate" matRipple *ngIf="isLoadData" (click)="loadData(contact)">
                     <div class="icon__contact">{{contact.name.substring(0,1)}}</div>
                     <p class="container__item__name">{{contact.name}}</p>
                     <button  mat-icon-button >
@@ -39,18 +45,7 @@
 
    </article>
 
-   <!-- edit -->
-   <!-- <article class=" container__edit">
-
-    <div class="container__contacts__head">
-        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="arrow-back"></mat-icon>
-        <h1>Contactos</h1>
-        <button mat-button >
-                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add"></mat-icon>
-            </button>
-    </div>
-
-    </article> -->
+   
 
 
 </section>

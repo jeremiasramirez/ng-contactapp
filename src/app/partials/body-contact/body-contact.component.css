@@ -1,0 +1,25 @@
+.phone{
+    width: 95%;
+    background-color: #d8d6d6;
+    border-radius: 12px;
+    padding-left: 8px;
+    margin: 25px 10px 6px 10px;
+    height: 45px;
+    padding-top: -10px;
+    padding-bottom: 30px;
+   }
+   .phone__title{
+    font-size:18px;
+    font-weight: 500;
+    margin-bottom:-17px;
+    color: #333;
+    margin-top: -10px;
+    font-family: roboto;
+  
+   }
+   .phone__content{
+    font-size: 15px;
+    font-family: sans-serif;
+    padding-bottom: 5px;
+    margin: 0;
+   }
