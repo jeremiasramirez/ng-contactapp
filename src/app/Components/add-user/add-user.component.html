@@ -1,0 +1,48 @@
+
+  
+
+
+  <!-- Modal to add new user-->
+  <div  class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo</h1>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        </div>
+        <div class="modal-body animate__animated animate__fadeIn">
+          <div *ngIf="!isFormValidated" class="alert alert-danger animate__animated animate__bounce" role="alert">
+            Formulario incompleto
+          </div>
+            <!-- form -->
+            <div class="mb-2 row">
+             
+                <div class="col-sm-10">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Nombre</label>
+                  <input type="text" class="form-control" id="staticName" [(ngModel)]="newUser.name"  value="" placeholder="Your name">
+                </div>
+              </div>
+              <div class="mb-2 row">
+                
+                <div class="col-sm-10">
+                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                    <input type="text" class="form-control" [(ngModel)]="newUser.email" id="staticEmail" value="email@example.com">
+                </div>
+              </div>
+              <div class="mb-2 row">
+                
+                <div class="col-sm-10">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Celular</label>
+                    <input type="text" class="form-control" id="staticCelular" [(ngModel)]="newUser.phone"  value="" placeholder="800-000-000">
+                </div>
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" mat-button data-bs-dismiss="modal">Close</button>
+          <button type="button" mat-flat-button (click)="addUser()" id="buttonAdd">
+            Add <mat-icon aria-hidden="false" data-bs-dismiss="modal" aria-label="Example home icon" fontIcon="add"></mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

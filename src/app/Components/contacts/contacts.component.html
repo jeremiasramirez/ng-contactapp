@@ -11,12 +11,14 @@
 (getBackContact)="openContacts($event)"
  [dataToView]="dataToView"/>
 
+
+ <app-add-user (insertUser)="insertUserTo($event)"   />
  
    <article class="container__contacts__items" *ngIf="!isDataToViewActive">
         <!-- options -->
         <div class="container__contacts__head animate">
             <h1>Contactos</h1>
-            <button mat-button >
+            <button mat-button  data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add"></mat-icon>
             </button>
         </div>
@@ -46,6 +48,7 @@
    </article>
 
    
+   <app-add-user />
 
 
 </section>

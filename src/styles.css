@@ -5,12 +5,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 .animate{
-    animation: animate .5s linear;
+    animation: animate .9s linear;
 }
 
 @keyframes animate {
     from{
-        opacity: .2;
+        opacity: 0;
     }
     to{
         opacity: 1;

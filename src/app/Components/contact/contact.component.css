@@ -26,6 +26,7 @@
     align-items: center;
     padding-top: 8px;
     flex-direction: column;
+    /* height: 30px; */
 }
 .container__name__contact__picture{
     width: 100px;
@@ -54,6 +55,7 @@
     font-family: sans-serif;
     font-weight: 600;
     color:#333;
+    /* height: 40px; */
     margin-top: 10px;
 }
 .contact__buttons{
@@ -63,5 +65,5 @@
 }
 .contact__buttons button *{
  
-    padding-left: 10px !important;
+    /* padding-left: 0px !important; */
 }

@@ -1,10 +1,10 @@
 .phone{
     width: 95%;
-    background-color: #d8d6d6;
+    background-color: #d8d6d6d2;
     border-radius: 12px;
     padding-left: 8px;
     margin: 25px 10px 6px 10px;
-    height: 45px;
+    height: 80px;
     padding-top: -10px;
     padding-bottom: 30px;
    }

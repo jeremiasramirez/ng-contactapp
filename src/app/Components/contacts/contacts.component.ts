@@ -8,6 +8,7 @@ import { MatButton } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 import { SkeletonItemComponent } from '../skeleton-item/skeleton-item.component';
 import { ContactComponent } from '../contact/contact.component';
+import { AddUserComponent } from '../add-user/add-user.component';
 // import { PipeSearch } from '../../Pipes/Find.pipe';
 
 @Component({
@@ -20,7 +21,8 @@ import { ContactComponent } from '../contact/contact.component';
     MatButton,
     MatRippleModule,
     ContactComponent,
-    SkeletonItemComponent
+    SkeletonItemComponent,
+    AddUserComponent
   ],
   providers: [UsersServices],
   templateUrl: './contacts.component.html',
@@ -31,6 +33,7 @@ export class ContactsComponent {
   public inputValue:string = ''
   public isLoadData:boolean = false;
   public dataToView:UserInterfaces=Object();
+  public isClosedModalAdd:boolean=false;
   public isDataToViewActive:boolean=false;
   constructor(public API:UsersServices){
     
@@ -59,4 +62,14 @@ export class ContactsComponent {
     value=false
     this.isDataToViewActive=value
   }
+  public insertUserTo(user:UserInterfaces):void{
+    
+      this.USERS.push(user)
+    
+    
+
+  
+    
+  }
+
 }
